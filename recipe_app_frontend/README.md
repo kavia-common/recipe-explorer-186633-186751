@@ -1,49 +1,37 @@
-# lightningjs
+# Recipe Explorer Frontend (LightningJS/Blits)
 
-### lightningjs
+A LightningJS (Blits) application for browsing, searching, and managing recipes. It follows the Ocean Professional theme: blue primary (#2563EB), amber secondary (#F59E0B), error (#EF4444), text (#111827), background (#f9fafb), surface (#ffffff).
 
+Features:
+- Top search bar (keyboard-simulated typing with Left/Right; Enter triggers search feedback)
+- Recipe grid/cards with image, title, tags, cook time, favorite toggle
+- Recipe detail view (modal) with ingredients and steps
+- Favorites panel (sidebar) with quick open/remove
+- Local persistence for favorites via localStorage
+- Optional API fetch if VITE_API_BASE or VITE_BACKEND_URL is configured; otherwise uses mock data
 
-Welcome to the _lightningjs_ Lightning 3 Blits App!
+Run:
+- npm install
+- npm run dev
 
-### Getting started
+Environment variables (set via .env):
+- VITE_API_BASE
+- VITE_BACKEND_URL
+- VITE_FRONTEND_URL
+- VITE_WS_URL
+- VITE_NODE_ENV
+- VITE_NEXT_TELEMETRY_DISABLED
+- VITE_ENABLE_SOURCE_MAPS
+- VITE_PORT
+- VITE_TRUST_PROXY
+- VITE_LOG_LEVEL
+- VITE_HEALTHCHECK_PATH
+- VITE_FEATURE_FLAGS
+- VITE_EXPERIMENTS_ENABLED
 
-Follow the steps below to get your Lightning 3 Blits App up and running in no time.
-
-#### IDE setup
-
-It is highly recommended to install the Blits [VS-code extension](https://marketplace.visualstudio.com/items?itemName=LightningJS.lightning-blits) which will give you template highlighting and improved autocompletion.
-
-#### Project setup
-
-Run the following command to install the dependencies of your App:
-
-```sh
-npm install
-```
-
-#### Build and run in development mode
-
-Run your App in development mode:
-
-```sh
-npm run dev
-```
-
-This command uses Vite to fire up a local server, with Hot Reloading support. Visit the provided link in your web browser to see the App in action.
-
-#### Build the App for production
-
-Create an optimized and minified version of your App:
-
-```sh
-npm run build
-```
-
-This will create a production version of the app in the `dist` folder.
-
-
-### Resources
-
-- [Blits documentation](https://lightningjs.io/v3-docs/blits/getting_started/intro.html) - official documentation
-- [Blits Example App](https://blits-demo.lightningjs.io/?source=true) - a great reference to learn by example
-- [Blits Components](https://lightningjs.io/blits-components.html) - off-the-shelf, basic and performant reference components
+Assets:
+Place recipe images in public/assets/*.jpg. Mock expects:
+- public/assets/recipe1.jpg
+- public/assets/recipe2.jpg
+- public/assets/recipe3.jpg
+- public/assets/recipe_placeholder.jpg
